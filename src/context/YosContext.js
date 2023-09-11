@@ -392,6 +392,7 @@ const YosContextProvider = ({ children }) => {
       phone: item.data?.phone,
       mail: item.data?.email,
       web: item.data?.web,
+      price: item?.price,
     }));
 
   const options3 = depertman?.map((item) => ({

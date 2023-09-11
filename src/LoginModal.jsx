@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import LoginForm from "./LoginForum";
 import Login from "./Login";
+import { useTranslation } from "react-i18next";
 
 const LoginModal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -8,7 +9,7 @@ const LoginModal = () => {
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-
+  const { t, i18n } = useTranslation();
   return (
     <>
       <button
@@ -17,7 +18,7 @@ const LoginModal = () => {
                py-2.5 mr-2 mb-2 "
         type="button"
       >
-        Sign In
+        {t("sign in")}
       </button>
 
       {showModal && (

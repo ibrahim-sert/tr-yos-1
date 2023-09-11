@@ -3,6 +3,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Rgister from "./Rgister";
+import { useTranslation } from "react-i18next";
 
 const RgisterModal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +23,7 @@ const RgisterModal = () => {
 
     toggleModal(); // Modalı kapat
   };
-
+  const { t, i18n } = useTranslation();
   return (
     <>
       <button
@@ -30,7 +31,7 @@ const RgisterModal = () => {
         className="text-black bg-green-light focus:ring-4 focus:ring-blue-300 font-bold rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600"
         type="button"
       >
-        Sign Up
+        {t("sign up")}
       </button>
 
       {showModal && (
